@@ -1,17 +1,16 @@
 import {Component, OnInit} from 'angular2/core';
-
+import { ROUTER_DIRECTIVES } from 'angular2/router';
 import {IProduct} from './product';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { StarComponent } from '../shared/star.component';
 
 import { ProductService} from './product.service';
 
-@Component({
-    selector: 'pm-products',
+@Component({    
     templateUrl: 'app/products/product-list.component.html',
     styleUrls: ['app/products/product-list.component.css'],
     pipes: [ProductFilterPipe],
-    directives: [StarComponent]
+    directives: [StarComponent, ROUTER_DIRECTIVES]
 })
 
 export class ProductListComponent implements OnInit{
